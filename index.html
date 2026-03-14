@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SMARTSTUDY AI</title>
+<style>
+body {
+font-familY: Ariel;
+background: #f4f6ff;
+text-align:center;
+padding:40px;
+}
+
+input {
+width: 60%
+padding: 10px
+
+button {
+padding: 10px  20px;
+background: #4a63ff;
+colour: white;
+border: none;
+}
+
+#response {
+margin-top:20px;
+font-size:18px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>SmartStudy AI</h1>
+<p> Helping students learn without expensive extra lessons </p>
+
+<input id="question"  placeholder= " Ask a study question...">
+
+<div id="response"></div>
+
+<script>
+function answer(){
+let q=document.getElementById("question").value;
+
+document.getElementById('response"). innerHTML =
+"AI Explaination: This is where SmartStudy AI would explain topics in simple tersm to help students understand.";
+}
+</script>
+
+</body>
+</html>
+
