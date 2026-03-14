@@ -5,47 +5,79 @@
 <style>
 body {
 font-familY: Ariel;
-background: #f4f6ff;
+background:#eef2ff;
 text-align:center;
 padding:40px;
 }
 
-input {
-width: 60%
-padding: 10px
+.container{
+background:white;
+padding:30px
+border-radius:10px;
+max-width:600px;
+margin:auto;
+box-shawdow;0px 0px 10px  rgba(0,0,0,0,1);
+}
+
+input{
+width:70%
+padding:10px
+margin-top:10px
 
 button {
 padding: 10px  20px;
 background: #4a63ff;
 colour: white;
 border: none;
+margin-left:10px;
+cursor;pointer;
 }
 
 #response {
 margin-top:20px;
 font-size:18px;
 }
+  
 </style>
+  
 </head>
 
 <body>
 
+<div class="container">
 <h1>SmartStudy AI</h1>
-<p> Helping students learn without expensive extra lessons </p>
+<p> Free AI learning support for students who cannot afford extra lessons </p>
 
-<input id="question"  placeholder= " Ask a study question...">
-
+<input id="question"  placeholder= " Ask a study question">
+<button onclick="studyAI()" > Ask a study question</button>
+  
 <div id="response"></div>
 
+</div>
+  
 <script>
-function answer(){
-let q=document.getElementById("question").value;
+function study AI(){
+  
+let q = document.getElementById("question").value. toLowerCase();
 
+if(q.includes("photosyntheses")){
 document.getElementById('response"). innerHTML =
-"AI Explaination: This is where SmartStudy AI would explain topics in simple tersm to help students understand.";
+"Photosynthesis is the process where plants use sunlight, water, and  carbon dioxide to produce food and oxygen.";
 }
+
+eles if(q.includes("gravity")){
+document.getElementById("response").innerhtml =
+"Gravity is the force that pulls objects towards each other. On Earth, gravity pulls everything towards the ground."}
+
+else{
+
+documenyt.getElementById('response"). innerHTML =
+"SmartStudy AI would generate an explaination here to help the students understand the topoic"
+  
+}
+}
+  
 </script>
 
 </body>
 </html>
-
