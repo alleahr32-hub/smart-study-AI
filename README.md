@@ -7,6 +7,9 @@ AI explanations of difficult topics
 practice question generator
 study notes summaries 
 exam preporation tips
+ask SmartStudy AI for simple explinations
+Practice question generator for students 
+Designed for students who cannot afford private lessons 
 secondary school students
 CSEC and CAPE students
 Caribbean Tertiary students
