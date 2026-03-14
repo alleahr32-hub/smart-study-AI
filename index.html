@@ -76,8 +76,40 @@ documenyt.getElementById('response"). innerHTML =
   
 }
 }
+<h2>Practice Question Generator</h2>
+
+<select id="subject">
+<option value=""> Choose a subject</option>
+<option value= "math">Math</option>
+<option value= "science">Science( Physics, Biology, Chemistry)</options>
+<option value= :"english"> English</option>
+</select>
+
+<button onclick= "generateQuestions()">Generate Question</button>
+<div id="questionOutput" style="margin-top:15px;  font-size:18px;"></div>
   
-</script>
+</script
+function generteQuestions(){
+let subject = document.getElementById("subject").value
+
+if (subject == "math"){
+document.getElementById("questionOutput").innerHTML =
+"Math Practice; What is 3/4 + 1/2?"
+}
+
+else if (subject == "english"){
+document. get ElemetById("questionOutput").innerHTML =
+"English Practice: indentify the noun in the sentence: 'The dog ran across the firld'"
+}
+
+else{
+document.getElementById("questionOutput").innerHTML =
+"Please select a subject."
+}
+}
+  
+
 
 </body>
 </html>
+
