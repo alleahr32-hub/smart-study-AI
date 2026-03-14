@@ -4,15 +4,29 @@
 <title>SMARTSTUDY AI</title>
 <style>
 body {
-font-familY: Ariel;
+font-family: Arial, sans-serif;
 background: #f4f6ff;
-text-align:center;
-padding:40px;
+text-align: center;
+padding: 40px;
 }
 
+
 input {
-width: 60%
-padding: 10px
+	width: 60%;
+	padding: 10px;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+button {
+	padding: 10px 20px;
+	background: #4a63ff;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	font-size: 16px;
+	cursor: pointer;
+}
 
 button {
 padding: 10px  20px;
@@ -33,16 +47,28 @@ font-size:18px;
 <h1>SmartStudy AI</h1>
 <p> Helping students learn without expensive extra lessons </p>
 
-<input id="question"  placeholder= " Ask a study question...">
+
+<input id="question" placeholder="Ask a study question...">
+<button onclick="answer()">Get Help</button>
 
 <div id="response"></div>
 
-<script>
-function answer(){
-let q=document.getElementById("question").value;
 
-document.getElementById('response"). innerHTML =
-"AI Explaination: This is where SmartStudy AI would explain topics in simple tersm to help students understand.";
+<script>
+async function answer() {
+	let q = document.getElementById("question").value;
+	document.getElementById("response").innerHTML = "Thinking...";
+	try {
+		let res = await fetch("http://localhost:5000/ask", {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify({ question: q })
+		});
+		let data = await res.json();
+		document.getElementById("response").innerHTML = "AI Explanation: " + data.answer;
+	} catch (e) {
+		document.getElementById("response").innerHTML = "Error: Could not reach AI backend.";
+	}
 }
 </script>
 
